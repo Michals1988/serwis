@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  
+  form(method='post')
+
+    p   Nazwa zamówienia:
+        input(type="text" name='orderName' value=dane[0].name)
+    table(style='width:100%', border='3')
+        tr 
+            th Nazwa produktu 
+            th Cena produktu 
+            th Ilość na magazynie
+            th Ilość zamawianego towaru
+
+        each date in dane
+            tr 
+                td=date.name_product
+                td=date.price
+                td=date.amount
+                td 
+                    input(type='number' name='amount_order' value=date.amount_products_order) 
+    p 
+        input(type='submit' name='editOrder_submit')
+
+      
+      

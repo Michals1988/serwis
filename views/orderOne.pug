@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+
+  table(style='width:100%', border='1')
+    tr 
+      th Nazwa produktu 
+      th Cena jednostkowa
+      th Ilość zamówień
+    each date in dane
+      tr 
+        td=date.product_name 
+        td=date.price_product
+        td=date.amount_products_order
+
+
+
+

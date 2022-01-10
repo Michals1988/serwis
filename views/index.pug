@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+
+  table(style='width:100%', border='1')
+    tr 
+      th Nazwa produktu 
+      th Cena produktu 
+      th Ilość na magazynia
+    each date in dane
+      tr 
+          td=date.name  
+          td=date.price
+          td=date.amount
+
+
+
+      
+      

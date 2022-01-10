@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+
+  form(method='post')
+    p 
+      label Czego szukasz?
+    p
+      input(type='text' name='search')
+    p 
+      input(type='submit' value='Szukaj')
+
+
+  table(style='width:100%', border='1')
+    tr 
+      th Nazwa zamowienia
+    each date in dane
+      tr 
+        td=date
+        td
+          a(href=`/orderOne/show/${date}`) Pokaż
+        td
+          a(href=`/editOrder/${date}`) Edytuj
+        td
+          a(href=`/orderOne/delete/${date}`) Usuń
+
+
+

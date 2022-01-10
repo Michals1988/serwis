@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  
+  form(method='post')
+    p 
+      label Nazwa produktu
+      input(type='text' name='productName_add')
+    p 
+      label Cena produktu
+      input(type='text' name='priceProduct_add')
+    p 
+      label Ilość produktów
+      input(type='text' name='amountProduct_add')
+    p 
+      input(type='submit' value='Zapisz')
+    
